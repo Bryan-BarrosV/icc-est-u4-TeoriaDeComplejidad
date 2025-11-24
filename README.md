@@ -53,26 +53,8 @@ Colocar aquí el marco teórico del trabajo, los conceptos y definiciones releva
 
 ---
 
-## **2. Ejemplos de Complejidad en Java**
 
-En esta sección se presentan las clases creadas dentro del proyecto y el análisis correspondiente a cada una.
 
----
-
-## **2.1 Complejidad O(1) – Constante**
-
-### **Archivo:** `ComplejidadConstante.java`
-
-### **Código del ejemplo**
-
-```java
-public void ejemplo() {
-    System.out.println("Ejemplo O(1)");
-    int x = 10;
-    int y = 5;
-    int suma = x + y;
-}
-```
 
 ### **Explicación resumida**
 
