@@ -11,7 +11,7 @@
 
 
 # Integrantes:
-- Nombre Completo 1 - Enlace a GitHub
+- Bryan Stalyn Barros Villa - [https://github.com/Bryan-BarrosV](https://github.com/Bryan-BarrosV)
 - Nombre Completo 1 - Enlace a GitHub
 
 # Objetivos:
@@ -52,12 +52,15 @@ Colocar aquí el marco teórico del trabajo, los conceptos y definiciones releva
 * Big O, Ω, Θ
 
 ---
-## **2. Ejemplos de Complejidad en Java
-** En esta sección se presentan las clases creadas dentro del proyecto y el análisis correspondiente a cada una. 
+## ** 2. Ejemplos de Complejidad en Java **
+En esta sección se presentan las clases creadas dentro del proyecto y el análisis correspondiente a cada una.
+
 ---
+
  ## **2.1 Complejidad O(1) – Constante** 
  ### **Archivo:** ComplejidadConstante.java 
  ### **Código del ejemplo**
+
 ```java
 
     public int obtenerPrimero(int[] arr){ 
@@ -69,6 +72,13 @@ Colocar aquí el marco teórico del trabajo, los conceptos y definiciones releva
         System.out.println("x asignado = " + x);
     }
 ```
+
+### **Explicación resumida**
+
+La complejidad es O(1) porque el tiempo de ejecución no depende del tamaño del arreglo. Siempre accede a una posición fija o asigna una variable, aunque el arreglo sea grande o pequeño. Por eso su tiempo es constante.
+
+---
+
 ## **2.2 Complejidad O(log n) – Logaritmica** 
 ### **Archivo:** ComplejidadLogaritmica.java 
 ### **Código del ejemplo**
@@ -94,6 +104,13 @@ public class ComplejidadLogaritmica {
     }
 }
 ```
+
+### **Explicación resumida**
+
+En la búsqueda binaria cada vez se elimina la mitad del arreglo. No revisa todos los elementos, solo divide y compara hasta encontrar el dato. Como reduce el tamaño a la mitad en cada paso, su complejidad es logarítmica O(log n).
+
+---
+
 ## **2.3 Complejidad O(n) – Lineal** 
 ### **Archivo:** ComplejidadLineal.java 
 ### **Código del ejemplo**
@@ -108,11 +125,18 @@ public class ComplejidadLineal {
 }
 ```
 
+### **Explicación resumida**
+
+El ciclo **for** recorre todos los elementos una sola vez desde 0 hasta n. Mientras más grande sea **n**, más veces se ejecuta el ciclo. Por eso su tiempo crece de forma lineal con respecto al tamaño del dato, es decir **O(n)**.
+
+---
+
 ## **2.4 Complejidad O(n log n) – Lineal-Logaritmica** 
-### **Archivo:** ComplejidadLogaritmica.java 
+### Archivo: ComplejidadNLogN.java
 ### **Código del ejemplo**
 
 ```java
+
 public class ComplejidadNLogN {
      public void mergeSort(int[] arr, int left, int right) {
         if (left < right) {
@@ -188,12 +212,20 @@ public class ComplejidadNLogN {
         arr[high] = temp;
         return i + 1;
     }
-    ```
+```
+
+### **Explicación resumida**
+
+Algoritmos como Merge Sort y Quick Sort dividen el arreglo en partes (eso es log n) y luego procesan todos los elementos para ordenarlos (eso es n). Al combinar ambos procesos, la complejidad total es n * log n, es decir O(n log n).
+
+---
+    
 ## **2.5 Complejidad O(n²) – Cuadratica**
 
- ### **Archivo:** ComplejidadCuadratica.java 
+### **Archivo:** ComplejidadCuadratica.java 
 
- ### **Código del ejemplo**
+### **Código del ejemplo**
+
 ```java
 public class ComplejidadCuadratica {
     public void sortBubble(int[] arr) {
@@ -239,20 +271,20 @@ public class ComplejidadCuadratica {
 }
 ```
 
-
 ### **Explicación resumida**
 
-*(Aquí el estudiante explica por qué es O(1))*
+En Bubble, Insertion y Selection Sort se usan dos ciclos anidados. El primer ciclo recorre los elementos y el segundo los compara nuevamente. Esto hace que el trabajo sea proporcional a n * n, lo que se expresa como O(n²).
 
 ---
-**PARA CADA COMPLEJIDAD, REPETIR LA ESTRUCTURA ANTERIOR**
+
 
 
 # **Conclusiones**
+**Diana Borja**:
+>*(Aquí el estudiante agrega conclusiones propias del trabajo)*
 
-*(Aquí el estudiante agrega conclusiones propias del trabajo)*
-
-**POR ESTUDIANTE**: *(Nombre completo del estudiante)*
+**Bryan Barros**:
+> El estudio de las complejidades algorítmicas permite evaluar el rendimiento de un programa antes de ejecutarlo. Mediante el análisis del costo temporal y espacial podemos determinar qué tan eficiente será un algoritmo según el crecimiento de los datos. Las notaciones como O(1), O(n), O(n²) y O(log n) describen cómo aumenta el tiempo o la memoria requerida, teniendo en cuenta factores como ciclos, recursividad, comparaciones y particiones del problema. En conclusión, comprender la complejidad permite seleccionar y diseñar algoritmos que utilicen mejor los recursos y ofrezcan soluciones óptimas para diferentes necesidades en la programación.
 
 ---
 
