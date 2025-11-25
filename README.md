@@ -1,5 +1,5 @@
 
-# **INFORME DE INVESTIGACION**
+# **INFORME DE INVESTIGACIÓN**
 
 
 ![LOGO CARRERA](src/assets/ups-icc.png)
@@ -12,47 +12,59 @@
 
 # Integrantes:
 - Bryan Stalyn Barros Villa - [https://github.com/Bryan-BarrosV](https://github.com/Bryan-BarrosV)
-- Nombre Completo 1 - Enlace a GitHub
+- Diana Valeria Borja Sarmiento - [https://github.com/DianitaB](https://github.com/DianitaB)
 
 # Objetivos:
 
-Colocar aquí los objetivos del trabajo.
+**Objetivo General**
+
+Analizar y comparar la complejidad temporal y eficiencia de distintos algoritmos de ordenamiento y búsqueda mediante su implementación práctica
+
+**Objetivos Específicos**
+- Implementar algoritmos de ordenamiento y búsqueda en un lenguaje de programación (Java).
+- Evaluar la complejidad computacional teórica (Big O) de cada algoritmo.
+- Medir los tiempos de ejecución de cada algoritmo bajo diferentes tamaños de muestra 
 
 
 # Marco Teórico: 
-
-Colocar aquí el marco teórico del trabajo, los conceptos y definiciones relevantes.
+El estudio de los algoritmos y su eficiencia es fundamental dentro del área de la informática, ya que permite comprender cómo se comportan las soluciones computacionales frente a distintos tamaños de datos. Los algoritmos no solo deben resolver un problema correctamente, sino también hacerlo de la manera más óptima posible, considerando el tiempo y los recursos que utilizan. A continuación, se presentan los conceptos esenciales que fundamentan el análisis realizado en este proyecto.
 
 ## **1. Teoría de la Complejidad**
 
-*(Aquí el estudiante coloca su investigación)*
 
 ### 1.1 Definición general
+La teoría de la complejidad es el estudio de recursos, principalmente el tiempo y la memoria. Es un campo central en la informática teórica y contribuye en gran medida a nuestra comprensión de lo que se puede y no se puede calcular de manera eficiente.
 
 ### 1.2 Importancia en la resolución de problemas
-
+El análisis de los algoritmos y su grado de dificultad es clave para resolver problemas en el ámbito de la informática, puesto que ayuda a encontrar la manera más efectiva de manejar información y tomar decisiones. Un problema puede contar con varias soluciones, pero no todas ellas brindan el mismo nivel de eficiencia cuando la cantidad de datos aumenta. Por eso, es crucial comprender el funcionamiento de un algoritmo, el tiempo que necesita para llevarse a cabo y la cantidad de memoria que consume, para poder seleccionar la opción más correcta.
 ### 1.3 Eficiencia de algoritmos
 
-* Coste temporal
-* Coste espacial
+- **Coste temporal:** 
+La complejidad temporal mide la cantidad de tiempo que tarda un algoritmo en ejecutarse a medida que crece el tamaño de entrada (utilizando notación Big O como O(1), O(n), O(n^2)), de igual forma se centra en la cantidad de operaciones o pasos necesarios para resolver un problema.
+
+- **Coste espacial**: La complejidad espacial mide la cantidad de memoria que requiere un algoritmo a medida que crece el tamaño de entrada (también expresada mediante notación Big O), de igual forma considera la memoria necesaria para los datos de entrada, los datos de salida y cualquier memoria adicional utilizada durante la ejecución del algoritmo.
 
 ### 1.4 Factores de tiempo de ejecución
 
-* Factores propios
-* Factores circunstanciales
-* Análisis teórico
-* Análisis experimental
+El tiempo de ejecución de un algoritmo no depende únicamente de su estructura interna, sino también de varios elementos que influyen en su comportamiento real
+- **Factores propios:** Estos factores dependen directamente del diseño y el funcionamiento del algoritmo. Incluyen el rendimiento de las comparaciones, los intercambios, las llamadas recursivas y el manejo de las estructuras de datos internas. Por ejemplo, el ordenamiento de Bubble Sort realiza muchas comparaciones innecesarias, mientras que el Merge Sort organiza su trabajo de forma más eficiente al dividir el problema. Estos factores son inherentes al algoritmo y solo cambian mediante modificaciones en su implementación.
+
+- **Factores circunstanciales:** Estos son factores externos al algoritmo en sí, pero que afectan de manera considerable su rendimiento en la práctica. Por ende incluyen aspectos como el hardware del ordenador, la carga del sistema operativo, el tipo de datos que se procesan y el orden inicial de los elementos.Por ejemplo algunos de los algoritmos funcionan mejor si los datos estan previamente ordenados, mientras que otros no se benefician de ello.
+- **Análisis teórico:** El análisis teórico se basa en la notacio Big O, por ende permite estimar cómo aumenta el tiempo de ejecución con el aumento en la cantidad de datos. Este análisis no se basa en pruebas experimentales, sino en el análisis estructural del algoritmo. Esto nos permite clasificar los algoritmos como eficientes o ineficientes antes de poder probarlos en la práctica.
+- **Análisis experimental:** El análisis experimental consiste en medir el tiempo real de la ejecución del algoritmo con diferentes tamaños de muestra. Este tipo de análisis complementa el análisis teórico, ya que nos permite observar el comportamiento del algoritmo en situaciones reales y bajo condiciones específicas. Al realizar múltiples pruebas y registrar sus tiempos de ejecución, obtenemos los datos concretos, los cuales podemos comparar con la complejidad teórica para evaluar si es el comportamiento esperado.
 
 ### 1.5 Notación de complejidad
 
-* Big O
-* Mejor caso
-* Peor caso
-* Caso promedio
-* Big O, Ω, Θ
+- **Big O:** La notación Big O es un método para expresar la complejidad algorítmica basada en el tamaño de entrada n. Indica cuántas operaciones realiza un algoritmo en el peor de los casos y cómo escala al aumentar el volumen de datos. Su objetivo principal es ilustrar la eficiencia de un algoritmo independientemente del hardware o los detalles de implementación.
+- **Mejor caso:** El mejor caso describe la situación mas favorable para un algoritmo, en la que se necesitan el número mínimo posible de operaciones. Pese a que habitualmente es el escenario ideal, no siempre es el más representativo. El caso óptimo en un algoritmo de búsqueda lineal es cuando se encuentra el elemento bsucado en la posición inicial. Usualmente su complejidad suele expresarse como Ω(n) o simplemente como una versión optimista de Big O.
+- **Peor caso:** El peor caso es el escenario menos favorable, ya que es donde un algoritmo realiza la mayor cantidad posible de operaciones. Este caso se suele utilizar  para expresar la complejidad de Big O, ya que asi garantizará un límite superior sin importar la situación, por ejemplo en Quick Sort, el peor de los casos ocurre cuando el pivote divide la lista de forma muy desigual, generando asi una compleljidad  O(n).
+- **Caso promedio:** El caso promedio representa el comportamiento esperado del algoritmo considerando entradas típicas o aleatorias. Por ende, es una forma mas realista de medir su rendimiento, ya que no siempre trabajmos con la mejor o la peor situación posible. Por ejemplo Quick Sort, aunque tiene un peor caso cuadrático, en promedio se comporta como O(n log n), lo que lo hace muy eficiente en la práctica.
+- **Big O:** La notación Big O se utiliza para describir el peor caso de un algoritmo. Indica el número máximo de operaciones que podría realizar a medida que crece el tamaño de la entrada.
+- **Ω:** La notación Ω describe el mejor caso del algoritmo, es decir, el mínimo de operaciones que necesita para resolverse. Representa un límite inferior del rendimiento.
+- **Θ:** La notación Θ representa una complejidad exacta, es decir, cuando el algoritmo tiene el mismo comportamiento tanto en el mejor, como en el promedio y el peor caso (al menos en orden de magnitud).
 
 ---
-## ** 2. Ejemplos de Complejidad en Java **
+## **2. Ejemplos de Complejidad en Java**
 En esta sección se presentan las clases creadas dentro del proyecto y el análisis correspondiente a cada una.
 
 ---
@@ -281,7 +293,7 @@ En Bubble, Insertion y Selection Sort se usan dos ciclos anidados. El primer cic
 
 # **Conclusiones**
 **Diana Borja**:
->*(Aquí el estudiante agrega conclusiones propias del trabajo)*
+> A medida que desarrollamos esta investigación, pude comprender de manera más produnfa cuan importante es el análisis de comlejidad y la eficiencia que tiene la misma en los algoritmos. Por ello, al comparar diferentes métodos de ordenamiento y búsqueda, pude corroborar que existe algoritmos que aunque sean muy faciles de implementar, no siempre son los adecuados para manejrar grandes cantidadees de información, mientras que otros como Merge Sort o la Busqueda Binaria siempre destacaran por su eficiencia.
 
 **Bryan Barros**:
 > El estudio de las complejidades algorítmicas permite evaluar el rendimiento de un programa antes de ejecutarlo. Mediante el análisis del costo temporal y espacial podemos determinar qué tan eficiente será un algoritmo según el crecimiento de los datos. Las notaciones como O(1), O(n), O(n²) y O(log n) describen cómo aumenta el tiempo o la memoria requerida, teniendo en cuenta factores como ciclos, recursividad, comparaciones y particiones del problema. En conclusión, comprender la complejidad permite seleccionar y diseñar algoritmos que utilicen mejor los recursos y ofrezcan soluciones óptimas para diferentes necesidades en la programación.
